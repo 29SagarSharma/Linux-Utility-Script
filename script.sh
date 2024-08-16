@@ -8,7 +8,7 @@ list_processes() {
   printf "%-10s %-10s %-10s %s\n" "PID" " USER" " MEM(%)  "
     echo "-------------------------------------------------------------"
 
-    # Use ps command to get the required information
+    
     ps aux --sort=-%mem | awk 'NR>1 {printf "%-10s %-10s %-10s\n", $2, $1 ,$4}'
 }
 
@@ -20,7 +20,7 @@ kill_process(){
 		exit 1;
 	fi
 
-	kill $pid
+    kill $pid
 
 	if [ $? -eq 0 ]; then
 		echo "Process $pid successfully terminated."
@@ -246,7 +246,7 @@ help(){
        less readmefile
 }
 
-#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>#
+#>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>#
 # Main script execution
 case "$1" in 
 	list_processess)
