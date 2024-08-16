@@ -30,6 +30,7 @@ Usage: ./script.sh [options]
   Usage: ./script.sh search_files <directoryname> <filename>
   Working: Feature that allows searching for files by name in a specified directory.
 
+For creating ,deleting and to change the password you need the root or administration access of your system.
 8.Feature:create_item
   Usage: ./script.sh create_item <path> <file|directory>
   Working: Feature to create a file in a specified directory
