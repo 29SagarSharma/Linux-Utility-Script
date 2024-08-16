@@ -251,14 +251,14 @@ LOGFILE="var/log/script.sh.log"
 #Function to log actions with timestamps
 log_action() {
         local action="$1"
-        local timestamp=$(date "+%Y-%m-%d %H:%M:%S)
-        echo "$timestamp - $action" >> "$LOGFILE
+        local timestamp=$(date "+%Y-%m-%d %H:%M:%S")
+        echo "$timestamp - $action" >> "$LOGFILE"
 
-
+}
 #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>#
 # Main script execution
 case "$1" in 
-	list_processess)
+	list_processes)
 		list_processes
 		;;
 	kill_process)
