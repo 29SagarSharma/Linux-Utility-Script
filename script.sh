@@ -119,7 +119,7 @@ delete_item(){
 	fi
 }
 
-rename_file(){
+rename_item(){
 	local old_path=$1
 	local new_path=$2
 
@@ -130,7 +130,7 @@ rename_file(){
  	fi
 
 	if [ -e "$old_path" ]; then
-	mv "$old_paht" "$new_path" && echo "Renamed '$old_path' to '$new_path'successfully"
+	mv "$old_path" "$new_path" && echo "Renamed '$old_path' to '$new_path'successfully"
 	else
 		echo "Error: '$old_path' does not exist."
 		exit 1
@@ -350,6 +350,7 @@ case "$1" in
 		help
 		;;
 	*)
-		echo "Usage: $0 --help"
+		echo "Invalid argument"
+		echo "For more information: '$0' --help"
 		;;
 	esac
