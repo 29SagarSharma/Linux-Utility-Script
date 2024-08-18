@@ -71,7 +71,7 @@ search_files(){
 	if [ -z "$directory" ] || [ -z "$filename" ]; then
 		echo "Error: Both directory and filename must be provided."
 		echo "usage: $0 search_files <directory> <filename>"
-		exit 1;
+		exit 1
 
 	fi 
 
@@ -313,7 +313,6 @@ case "$1" in
 			backup_item "$2" "$3"
 		else 
 			echo "Usage: $0 backup_item <source_path> <backup_path>"
-		exit 1
 		fi
 		;;
 	list_users)
